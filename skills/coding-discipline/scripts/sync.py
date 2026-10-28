@@ -18,9 +18,9 @@ import subprocess
 import sys
 import tempfile
 import unicodedata
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 import yaml
 
@@ -98,7 +98,18 @@ def run(cmd: list[str], *, cwd: Path | None = None, strip: bool = True) -> str:
         raise RuntimeError(f"command failed: {' '.join(cmd)}\n{detail.strip()}") from exc
 
 
-def latest_commit(repo: str, ref: str) -> str:
+def latest_commit(repo: str, path: str, ref: str) -> str:
+    """Return the last commit that touched path, falling back to the branch head."""
+    api = (
+        f"https://api.github.com/repos/{repo}/commits?"
+        f"path={quote(path, safe='')}&sha={quote(ref, safe='')}&per_page=1"
+    )
+    try:
+        data = json.loads(fetch_text(api))
+        if isinstance(data, list) and data and data[0].get("sha"):
+            return data[0]["sha"]
+    except Exception:
+        pass
     out = run(["git", "ls-remote", f"https://github.com/{repo}.git", f"refs/heads/{ref}"])
     if not out:
         raise RuntimeError(f"could not resolve {repo} refs/heads/{ref}")
@@ -200,7 +211,7 @@ def sync_sources(
     all_headings: dict[str, set[str]] = {}
     lock_sources = []
     for source in sources:
-        commit = latest_commit(source["repo"], source["ref"])
+        commit = latest_commit(source["repo"], source["path"], source["ref"])
         url = f"https://raw.githubusercontent.com/{source['repo']}/{commit}/{source['path']}"
         text = fetch_text(url)
         headings = split_sections(text)
@@ -327,7 +338,6 @@ def sync_sources(
         for heading in source_index[sid]["headings"]
     )
     coverage = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_source_bullets": total_bullets,
         "matched": matched,
         "duplicates": duplicates,
@@ -339,7 +349,6 @@ def sync_sources(
     }
     lock = {
         "version": 1,
-        "generated_at": coverage["generated_at"],
         "skill_sha256": sha256(render(config)),
         "sources": lock_sources,
         "stats": {
@@ -368,8 +377,6 @@ def write_atomic(path: Path, text: str) -> None:
 def report_text(lock: dict[str, Any], coverage: dict[str, Any]) -> str:
     lines = [
         "# Sync report",
-        "",
-        f"Generated: `{lock['generated_at']}`",
         "",
         "## Sources",
         "",

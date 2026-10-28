@@ -1,11 +1,9 @@
 # Sync report
 
-Generated: `2026-10-28T07:01:18.627459+00:00`
-
 ## Sources
 
-- `karpathy-guidelines`: `multica-ai/andrej-karpathy-skills` `skills/karpathy-guidelines/SKILL.md` @ `2c606141936f1eeef17fa3043a72095b4765b9c2` (license: MIT (declared in SKILL.md; repository has no LICENSE file))
-- `ub-mode`: `unclebob/ub-mode` `SKILL.md` @ `57a8bdd28e45ed41900ace0bafa2ff76dd9ed70f` (license: No explicit license)
+- `karpathy-guidelines`: `multica-ai/andrej-karpathy-skills` `skills/karpathy-guidelines/SKILL.md` @ `64723a49ea6117894304eb491f0d32a60570bf45` (license: MIT (declared in SKILL.md; repository has no LICENSE file))
+- `ub-mode`: `unclebob/ub-mode` `SKILL.md` @ `7d7720cd7a1c51863c32a028f6e987d233bc2ad6` (license: No explicit license)
 
 ## Counts
 

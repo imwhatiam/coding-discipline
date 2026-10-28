@@ -1,6 +1,5 @@
 {
   "version": 1,
-  "generated_at": "2026-10-28T07:01:18.627459+00:00",
   "skill_sha256": "0947f0d0e389ba27478a5aad0afdcc5a3473e8099e08029d129c16c52a32cb43",
   "sources": [
     {
@@ -8,7 +7,7 @@
       "repo": "multica-ai/andrej-karpathy-skills",
       "path": "skills/karpathy-guidelines/SKILL.md",
       "ref": "main",
-      "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+      "commit": "64723a49ea6117894304eb491f0d32a60570bf45",
       "content_sha256": "6e22cc54cb02a5e98ae42d06d9d7292db0c1b43894831b32879beb0166b2aea7",
       "license": "MIT (declared in SKILL.md; repository has no LICENSE file)"
     },
@@ -17,7 +16,7 @@
       "repo": "unclebob/ub-mode",
       "path": "SKILL.md",
       "ref": "master",
-      "commit": "57a8bdd28e45ed41900ace0bafa2ff76dd9ed70f",
+      "commit": "7d7720cd7a1c51863c32a028f6e987d233bc2ad6",
       "content_sha256": "4120873db2e3681ea9b7de4d7105fc9d3406657c9ada91ce77b9b3c4962f3202",
       "license": "No explicit license"
     }
