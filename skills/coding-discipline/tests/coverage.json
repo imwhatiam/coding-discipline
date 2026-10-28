@@ -1,0 +1,696 @@
+{
+  "generated_at": "2026-10-28T07:01:18.627459+00:00",
+  "total_source_bullets": 76,
+  "matched": 76,
+  "duplicates": 0,
+  "new": 0,
+  "possible_duplicates": 0,
+  "unmapped_headings": [],
+  "possible_duplicate_details": [],
+  "rules": [
+    {
+      "source": "karpathy-guidelines",
+      "heading": "1. Think Before Coding",
+      "index": 1,
+      "text": "State your assumptions explicitly. If uncertain, ask.",
+      "sha256": "58a385a25ed7d28331eaf74d6abaa4e0ee0fd706351f98b35861998e16256eb4",
+      "rule_id": "karpathy-guidelines-1-think-before-coding-01",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "1. Think Before Coding",
+      "index": 2,
+      "text": "If multiple interpretations exist, present them - don't pick silently.",
+      "sha256": "b740565a554f872aa1e7ef5b6f5caf5053887b11e635f972c6097d65ebf7b130",
+      "rule_id": "karpathy-guidelines-1-think-before-coding-02",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "1. Think Before Coding",
+      "index": 3,
+      "text": "If a simpler approach exists, say so. Push back when warranted.",
+      "sha256": "0e4e79ce947c2db0990ec3580884eddde0f625016b3b4fb93490f42ab7b8e307",
+      "rule_id": "karpathy-guidelines-1-think-before-coding-03",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "1. Think Before Coding",
+      "index": 4,
+      "text": "If something is unclear, stop. Name what's confusing. Ask.",
+      "sha256": "3ee69e1d3bb9ca7b2b0d03f1e1d56f0c6c7b13223adcd1a3b030faca281e2a36",
+      "rule_id": "karpathy-guidelines-1-think-before-coding-04",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "2. Simplicity First",
+      "index": 1,
+      "text": "No features beyond what was asked.",
+      "sha256": "32006e9bb603a35aa04825cf516907424dff70dfce8cde79773510e46ceed652",
+      "rule_id": "karpathy-guidelines-2-simplicity-first-01",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "2. Simplicity First",
+      "index": 2,
+      "text": "No abstractions for single-use code.",
+      "sha256": "0e25754f14b972860d5fc45ccb7286f3eac948f7a7c542ff27dffbd21c8519c3",
+      "rule_id": "karpathy-guidelines-2-simplicity-first-02",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "2. Simplicity First",
+      "index": 3,
+      "text": "No \"flexibility\" or \"configurability\" that wasn't requested.",
+      "sha256": "43b764e635d0ab4dda1b6f2d1a0703aa627c84821971952b2d463ac3f025f5b4",
+      "rule_id": "karpathy-guidelines-2-simplicity-first-03",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "2. Simplicity First",
+      "index": 4,
+      "text": "No error handling for impossible scenarios.",
+      "sha256": "af0857ca3dee717e843ddf3dedec27a83a45ff9f1ea583985945612e1430d740",
+      "rule_id": "karpathy-guidelines-2-simplicity-first-04",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "2. Simplicity First",
+      "index": 5,
+      "text": "If you write 200 lines and it could be 50, rewrite it.",
+      "sha256": "741bdf3762ac9e32c75c21253b799729c2652f5cfe33bf57c9d2fd13d683f647",
+      "rule_id": "karpathy-guidelines-2-simplicity-first-05",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "3. Surgical Changes",
+      "index": 1,
+      "text": "Don't \"improve\" adjacent code, comments, or formatting.",
+      "sha256": "d7096d6aabcfb3667bcd24f146c3b130fbed8027b353db13673bbb55c4140220",
+      "rule_id": "karpathy-guidelines-3-surgical-changes-01",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "3. Surgical Changes",
+      "index": 2,
+      "text": "Don't refactor things that aren't broken.",
+      "sha256": "d791fbf34b23f8c52a8621cfa68c41233e6740027ff5cc4191f34c20519c42b6",
+      "rule_id": "karpathy-guidelines-3-surgical-changes-02",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "3. Surgical Changes",
+      "index": 3,
+      "text": "Match existing style, even if you'd do it differently.",
+      "sha256": "b874717ec8c37fc6794f81dac0e68caef80dcdf1cb2aa1fd77c2af8ab6d8cf9f",
+      "rule_id": "karpathy-guidelines-3-surgical-changes-03",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "3. Surgical Changes",
+      "index": 4,
+      "text": "If you notice unrelated dead code, mention it - don't delete it.",
+      "sha256": "4f9570f6327567517e3557aff2b719a814fee3ac104bfcaf019daf03983ae4c3",
+      "rule_id": "karpathy-guidelines-3-surgical-changes-04",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "3. Surgical Changes",
+      "index": 5,
+      "text": "Remove imports/variables/functions that YOUR changes made unused.",
+      "sha256": "270b1525e3793f225a9d6a045582432b5ac2225016be8243c678020ebdc46456",
+      "rule_id": "karpathy-guidelines-3-surgical-changes-05",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "3. Surgical Changes",
+      "index": 6,
+      "text": "Don't remove pre-existing dead code unless asked.",
+      "sha256": "5cc44a6f941a4ddbada65c3f45a24889715eb888052edb8a7e5337ee9413a9b5",
+      "rule_id": "karpathy-guidelines-3-surgical-changes-06",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "4. Goal-Driven Execution",
+      "index": 1,
+      "text": "\"Add validation\" → \"Write tests for invalid inputs, then make them pass\"",
+      "sha256": "25d06b7bc8724c4aadbd7f38af476da8c6ba15ed73c6f6b11347d8413f7f8516",
+      "rule_id": "karpathy-guidelines-4-goal-driven-execution-01",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "4. Goal-Driven Execution",
+      "index": 2,
+      "text": "\"Fix the bug\" → \"Write a test that reproduces it, then make it pass\"",
+      "sha256": "20cf1ebc89190baf6ffe0c591f0e210bccbbcdb5f3f7d6eeaa35ba768e352ba2",
+      "rule_id": "karpathy-guidelines-4-goal-driven-execution-02",
+      "status": "matched"
+    },
+    {
+      "source": "karpathy-guidelines",
+      "heading": "4. Goal-Driven Execution",
+      "index": 3,
+      "text": "\"Refactor X\" → \"Ensure tests pass before and after\"",
+      "sha256": "ca960392bcdf3bae67c6f3a2d311b811badc8e3ad00b10dc70b70dac7172c468",
+      "rule_id": "karpathy-guidelines-4-goal-driven-execution-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Laziness Protocol",
+      "index": 1,
+      "text": "One decision lives in one place.",
+      "sha256": "f9561c78669b6bb2cbdf3d7104c0cb1ff953667614dfde491dfadf503a4bb0e5",
+      "rule_id": "ub-mode-laziness-protocol-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Laziness Protocol",
+      "index": 2,
+      "text": "Ship the smallest edit that solves the problem.",
+      "sha256": "34afa6771ba1809f362b64056d916e51fbe6d7565e35fa1d08ad23525fbdc4aa",
+      "rule_id": "ub-mode-laziness-protocol-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Foundational Thinking",
+      "index": 1,
+      "text": "Get the data shape right before you write the logic.",
+      "sha256": "13ca68e19e81ee949b0fb55e7b08f3e286960c46cc2b180125bef6b93da7a945",
+      "rule_id": "ub-mode-foundational-thinking-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Foundational Thinking",
+      "index": 2,
+      "text": "Do first whatever helps every later phase.",
+      "sha256": "654bdef9680fd327d23be0032cad6679a1df62a203b58f2d9bb80897069b6fe4",
+      "rule_id": "ub-mode-foundational-thinking-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Foundational Thinking",
+      "index": 3,
+      "text": "If a concurrent writer would matter, do not share state.",
+      "sha256": "625191a18b53cb78ca4e3cde4e00da2635e3717328c66273d25ab2550f0343dd",
+      "rule_id": "ub-mode-foundational-thinking-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "TDD",
+      "index": 1,
+      "text": "Write the failing test before you change the code.",
+      "sha256": "370b996127ea342ae504e0af9c3bdf0a573f72b34db1478dc997f6b9de85598e",
+      "rule_id": "ub-mode-tdd-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "TDD",
+      "index": 2,
+      "text": "See it fail for the reason you expect.",
+      "sha256": "d9b1d864c31eb876cf952f3a4bd737ff15fe1d32df23f301a160e2897c51af77",
+      "rule_id": "ub-mode-tdd-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "TDD",
+      "index": 3,
+      "text": "Make the smallest change that makes it pass.",
+      "sha256": "8a4faaaac9bab4099da0bca29e93552e40b0877e56df4e8476500689f617ee99",
+      "rule_id": "ub-mode-tdd-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "TDD",
+      "index": 4,
+      "text": "If an honest test is impractical, do not write a bad one.",
+      "sha256": "461da6c17dd29ad5d7a067acaddfd04181dee7a4cec59d4191d8240aecd10ce0",
+      "rule_id": "ub-mode-tdd-04",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Redesign From First Principles",
+      "index": 1,
+      "text": "Do not bolt a new requirement onto the old design.",
+      "sha256": "06f2260ab7e2c812309b275b24bdd51d549a81b78d340f7e05dc0dff93ea1290",
+      "rule_id": "ub-mode-redesign-from-first-principles-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Redesign From First Principles",
+      "index": 2,
+      "text": "Ask what you would have built if it had been there from the start, think that through, and deliver it in pieces.",
+      "sha256": "76a177b350b8f7b27933c9bd8198692fc5821f2d52753c10f7e481bfbb1f8858",
+      "rule_id": "ub-mode-redesign-from-first-principles-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Attack the Premise",
+      "index": 1,
+      "text": "When two fixes that share one premise fail the same gate, write that premise in one sentence and count which actors hold the imbalance.",
+      "sha256": "0d82fd433e853b2f0ef5baa63af73bbdff33b7a049b48e32675d8323b6c4e3ef",
+      "rule_id": "ub-mode-attack-the-premise-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Attack the Premise",
+      "index": 2,
+      "text": "Remove the assignment.",
+      "sha256": "b687ab5ff267962fc5dec8de200a41cdfed6408359a57cdf4a8fb6eef879dcde",
+      "rule_id": "ub-mode-attack-the-premise-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Attack the Premise",
+      "index": 3,
+      "text": "Do not start another fix until you have done that.",
+      "sha256": "f63a77cb562701d16b481f9095e0b275950cd7fef237768d96e49fa49118bd80",
+      "rule_id": "ub-mode-attack-the-premise-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Subtract Before You Add",
+      "index": 1,
+      "text": "Take complexity out before you add anything.",
+      "sha256": "cf3c8a8e4ab767de36197cf5d2429edbcbdc2924edd9567630d18f8a24454164",
+      "rule_id": "ub-mode-subtract-before-you-add-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Outcome-Oriented Execution",
+      "index": 1,
+      "text": "Aim at the end state you can check.",
+      "sha256": "539eb5636c5c96d651aeda8f277020fa70c7cbb99fded3bedf655ace125f1cf4",
+      "rule_id": "ub-mode-outcome-oriented-execution-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Outcome-Oriented Execution",
+      "index": 2,
+      "text": "A break in the middle is allowed when you planned it and can undo it.",
+      "sha256": "126b97c0b93027ab3df4ee5a847cb68d34879dad88fb09f1cc55dc3c9dd7f04a",
+      "rule_id": "ub-mode-outcome-oriented-execution-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Build the Lever",
+      "index": 1,
+      "text": "If the work is not obvious at a glance, build the tool that does it.",
+      "sha256": "b89a602cfe6f19c4831a236d59598a0f684423f13eb6f6d4014ccab2cc946ac6",
+      "rule_id": "ub-mode-build-the-lever-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Build the Lever",
+      "index": 2,
+      "text": "Do one unit by hand, then make the tool match that unit.",
+      "sha256": "f0dfaa7751247af1a7885440e87d5e28e2367b052565152725fac97eacd51e73",
+      "rule_id": "ub-mode-build-the-lever-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 1,
+      "text": "Put the domain in a structure that makes the illegal states impossible.",
+      "sha256": "5fdb5d215fe34ae3e6a17c9b88bb57581238af25fbcff09a0de0737571c4d9dc",
+      "rule_id": "ub-mode-architecture-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 2,
+      "text": "Maintain a glossary of domain terms.",
+      "sha256": "6b9af6dab9f71b8464ea3fee664500e65b5d9c02b443d125df8b7da463eae341",
+      "rule_id": "ub-mode-architecture-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 3,
+      "text": "If the code is already clear and local, leave it.",
+      "sha256": "6317f7dd75d28dc651d5447746049ab447830273c2e671468876dd5e2bc261a9",
+      "rule_id": "ub-mode-architecture-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 4,
+      "text": "Check the data where it enters.",
+      "sha256": "dea2c08e75baf41daa25496b93b70f9fa01c1f183cd592d7e36b7efef204adb4",
+      "rule_id": "ub-mode-architecture-04",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 5,
+      "text": "Inside, trust it.",
+      "sha256": "c24c7842a8dbcc914b5031ae549bb3f7216973e8d34728dff1ee34ee9f5c93b3",
+      "rule_id": "ub-mode-architecture-05",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 6,
+      "text": "Keep the business logic in a pure function.",
+      "sha256": "17bdbe5499cfc0b368c2b37adfe0c3fa2b09ed7bd39e4947b616aa45cf79dc32",
+      "rule_id": "ub-mode-architecture-06",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 7,
+      "text": "Make the illegal value impossible to write.",
+      "sha256": "86ca43851f77544e915612410a202cbe184036f925dbde93a11e7e86e7861523",
+      "rule_id": "ub-mode-architecture-07",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 8,
+      "text": "Parse outside data once, where it comes in.",
+      "sha256": "256da55bf318e7f83725710caa2435cb766a7faecc3f18e659d83ffce1e0852a",
+      "rule_id": "ub-mode-architecture-08",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 9,
+      "text": "Do not silence the compiler.",
+      "sha256": "c2bb5da48f7397ab60827f23f81985a4ffd93eec5c8628f1c6d43b9def0fa513",
+      "rule_id": "ub-mode-architecture-09",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 10,
+      "text": "Running it twice, or running it after a crash halfway through, ends in the same state.",
+      "sha256": "89ec97131e4571535e4d90e455df732beea895f800ac32bb91633515d9e71f1d",
+      "rule_id": "ub-mode-architecture-10",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 11,
+      "text": "If they do not need the same mutable thing, give each its own.",
+      "sha256": "028aa35fc202928d5d4b8c31b4aa40c50bdfd6738a34b40f6229d517b637e225",
+      "rule_id": "ub-mode-architecture-11",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Architecture",
+      "index": 12,
+      "text": "If they do, allow one writer, and enforce that in the structure.",
+      "sha256": "7885ceab35ff78656a60e9642182b396035edc344eddfd90cdce84cce479f867",
+      "rule_id": "ub-mode-architecture-12",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Fix Root Causes",
+      "index": 1,
+      "text": "Reproduce it.",
+      "sha256": "cf9e454c67c162657e4109f5f0d2c6218f2b7cd7b4ac03846ee8bb5ee6b2ed4a",
+      "rule_id": "ub-mode-fix-root-causes-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Fix Root Causes",
+      "index": 2,
+      "text": "Fix the cause.",
+      "sha256": "a7af6bdb71cfb5f75bca28df4598157c09fba770d4d95048547e7a5ca2b6dab8",
+      "rule_id": "ub-mode-fix-root-causes-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Fix Root Causes",
+      "index": 3,
+      "text": "A guard that only hides the crash is not a fix.",
+      "sha256": "19f8da9fa86d810a5024773bd688256c95e405aadf3263f680370494568b59b9",
+      "rule_id": "ub-mode-fix-root-causes-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Sequence work into verifiable units",
+      "index": 1,
+      "text": "Finish one small unit and check it.",
+      "sha256": "0d266195e4f09b0bb8f5c7185689862d387eeb3174dead768a55b937cd294721",
+      "rule_id": "ub-mode-sequence-work-into-verifiable-units-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Sequence work into verifiable units",
+      "index": 2,
+      "text": "Then start the next.",
+      "sha256": "be7f10e1c6763c86445fc4dcf8e428880e2723b2b347c888efcfc0b60aa2ffb6",
+      "rule_id": "ub-mode-sequence-work-into-verifiable-units-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Test Behavior, Not Implementation",
+      "index": 1,
+      "text": "The test calls the code the way its user does and checks the result that user would see.",
+      "sha256": "5d12578ab2dc039903e3b50dad69f61e1aa53506e04a748e27367a39e9027ce7",
+      "rule_id": "ub-mode-test-behavior-not-implementation-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Test Behavior, Not Implementation",
+      "index": 2,
+      "text": "If the test would still pass when every function returned nothing, throw it out.",
+      "sha256": "e5da200f8af853b43357439c7ca2cfdaa9c34fdc69768a3a8e35144f4bce152a",
+      "rule_id": "ub-mode-test-behavior-not-implementation-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Crapper",
+      "index": 1,
+      "text": "Use the crapper tool",
+      "sha256": "1534cccdad4ce356ce26aabdcdce8d5f0674706d7ae65971133a02da9ada8c8d",
+      "rule_id": "ub-mode-crapper-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Crapper",
+      "index": 2,
+      "text": "Reduce each function under  CRAP 10 by splitting it, by testing it, or both.",
+      "sha256": "b13c9f9a59a4b9cd9164cb79eedd97f1b1c3b990610a16e2337f0814832229e6",
+      "rule_id": "ub-mode-crapper-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Crapper",
+      "index": 3,
+      "text": "Consider whether case statements are worth reducing.",
+      "sha256": "cd83a58d1dca167ffc708cacaf8c8ef9da23e244c40286e7eed02b10b821e1ce",
+      "rule_id": "ub-mode-crapper-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Dryer",
+      "index": 1,
+      "text": "Use the dryer tool to eliminate duplication that rank 0.8 or above.",
+      "sha256": "152c31f4c7ba1ece7a7dda331c7a281f996c05bdc15e538f88a36e4557960c2c",
+      "rule_id": "ub-mode-dryer-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Mutator",
+      "index": 1,
+      "text": "Use the mutator tool",
+      "sha256": "0f2b8a1e46a2498622d14f10face11423e7924e159c9cecd027a712437408215",
+      "rule_id": "ub-mode-mutator-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Mutator",
+      "index": 2,
+      "text": "Cover the uncovered.",
+      "sha256": "e2f051e3245b6d788361d66f78c8f77e52379fc7233d07811c2d974f5b2a73d7",
+      "rule_id": "ub-mode-mutator-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Mutator",
+      "index": 3,
+      "text": "Kill the survivors.",
+      "sha256": "afa66cfe9a65b76f58dc24219ea421e39c59cc4f4bcaf7a2ffa0ef2c5b510017",
+      "rule_id": "ub-mode-mutator-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Mutator",
+      "index": 4,
+      "text": "Delete dead code.",
+      "sha256": "9578747aa22a16075e2d259f95929d34f7d8aaeac81b33292d9b7f5ad1e27ead",
+      "rule_id": "ub-mode-mutator-04",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Refactoring",
+      "index": 1,
+      "text": "Pin what the code does.",
+      "sha256": "eb1bfa2980519e005b153049ce0c9b5e1b16427aeb40f081a224a9eaeaf11518",
+      "rule_id": "ub-mode-refactoring-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Refactoring",
+      "index": 2,
+      "text": "Change the structure.",
+      "sha256": "ca2f9c7a3904c0a2a745fc74ea91dae5cd7a438e478023aca2f2bf41f36e149c",
+      "rule_id": "ub-mode-refactoring-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Refactoring",
+      "index": 3,
+      "text": "Prove the behavior did not change.",
+      "sha256": "60cd65ba155fbf927ee20b634ce5eff49cecb4314e8fd5559af265f3f04aa570",
+      "rule_id": "ub-mode-refactoring-03",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Keep a Log",
+      "index": 1,
+      "text": "Keep a log of every action you take and the reason you took it.",
+      "sha256": "12cee803c7c783c1d68225b8d0683b37bb163f16c3ed6eadfc46981e3c68fb36",
+      "rule_id": "ub-mode-keep-a-log-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Keep a Log",
+      "index": 2,
+      "text": "Report that log upon completion.",
+      "sha256": "9616afdd64a4511651067983e86140a4e22d0c5a7e87642951a9f3b5ae51148c",
+      "rule_id": "ub-mode-keep-a-log-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Guard the Context Window",
+      "index": 1,
+      "text": "Keep the main thread small.",
+      "sha256": "dd971249a99da5ad31296b5b18bbaa799c8fb15bbc37a2a776e10364e8c91bbf",
+      "rule_id": "ub-mode-guard-the-context-window-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Guard the Context Window",
+      "index": 2,
+      "text": "Send the bulk elsewhere, and keep the summary.",
+      "sha256": "8a5964174469554b9e53ab4e9e6bae92aabd96b59d0bf396f19445aa493aa79f",
+      "rule_id": "ub-mode-guard-the-context-window-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Worktree Cleanup",
+      "index": 1,
+      "text": "Find what is safe to remove, confirm nothing still in use needs it, then reclaim the disk.",
+      "sha256": "b67c4e5fa4839691c608cef423bd70a3e77303017d3ece5fef4f00c725df2a08",
+      "rule_id": "ub-mode-worktree-cleanup-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Worktree Cleanup",
+      "index": 2,
+      "text": "Uncommitted work waits for a decision.",
+      "sha256": "c750d8ccf8c96aa64c8dce17131fdbacc8d3f35938493ea60682870427e6bb31",
+      "rule_id": "ub-mode-worktree-cleanup-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Commit and Push",
+      "index": 1,
+      "text": "Commit often, in small ordered commits.",
+      "sha256": "64794762b860113de466deea4990bcd9357346d02e963b90b365272ec50eaf73",
+      "rule_id": "ub-mode-commit-and-push-01",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Commit and Push",
+      "index": 2,
+      "text": "Each commit says why, what changed, and how you proved it.",
+      "sha256": "90db5a756817cddfb1d44d1a18057fa4d97cbb88bc76eded1fbf17a9ac39aebc",
+      "rule_id": "ub-mode-commit-and-push-02",
+      "status": "matched"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Commit and Push",
+      "index": 3,
+      "text": "Push to the main line at the end.",
+      "sha256": "6520347231432f8505c73a0b3819f576db42baf66c941142b7e873674a4422b2",
+      "rule_id": "ub-mode-commit-and-push-03",
+      "status": "matched"
+    }
+  ]
+}

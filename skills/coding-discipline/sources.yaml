@@ -1,0 +1,39 @@
+version: 1
+sources:
+  - id: karpathy-guidelines
+    repo: multica-ai/andrej-karpathy-skills
+    path: skills/karpathy-guidelines/SKILL.md
+    ref: main
+    license: "MIT (declared in SKILL.md; repository has no LICENSE file)"
+    headings:
+      "1. Think Before Coding": surface-assumptions
+      "2. Simplicity First": keep-it-small
+      "3. Surgical Changes": surgical-changes
+      "4. Goal-Driven Execution": define-done
+
+  - id: ub-mode
+    repo: unclebob/ub-mode
+    path: SKILL.md
+    ref: master
+    license: "No explicit license"
+    headings:
+      "Laziness Protocol": keep-it-small
+      "Foundational Thinking": foundation
+      "TDD": test-first
+      "Redesign From First Principles": foundation
+      "Attack the Premise": attack-premise
+      "Subtract Before You Add": keep-it-small
+      "Outcome-Oriented Execution": define-done
+      "Build the Lever": build-lever
+      "Architecture": architecture
+      "Fix Root Causes": fix-root-cause
+      "Sequence work into verifiable units": sequence
+      "Test Behavior, Not Implementation": test-behavior
+      "Crapper": crapper
+      "Dryer": dryer
+      "Mutator": mutator
+      "Refactoring": refactor
+      "Keep a Log": keep-log
+      "Guard the Context Window": guard-context
+      "Worktree Cleanup": worktree
+      "Commit and Push": commit

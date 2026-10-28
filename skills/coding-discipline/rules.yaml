@@ -1,0 +1,425 @@
+version: 1
+skill:
+  name: coding-discipline
+  description: 'Lightweight coding discipline for AI coding agents: surface assumptions before coding, keep changes
+    small and surgical, write failing tests first, verify outcomes, and run the mandatory quality gates. Use when
+    writing, reviewing, refactoring, or debugging non-trivial code. Do not use for trivial one-line edits, formatting-only
+    changes, or pure explanation.'
+  license: MIT
+  metadata:
+    version: 1.0.0
+    repository: https://github.com/imwhatiam/coding-discipline
+intro:
+- A lightweight discipline for any code change. It biases toward caution over speed; use judgment for trivial tasks.
+- '**Priority:** the user''s request and the project''s own instructions override this skill. If they conflict,
+  follow the project and say so.'
+sections:
+- id: before
+  title: Before You Code
+  groups:
+  - id: surface-assumptions
+    title: Surface assumptions
+    source_headings:
+    - source: karpathy-guidelines
+      heading: 1. Think Before Coding
+    rules:
+    - id: karpathy-guidelines-1-think-before-coding-01
+      text: State your assumptions explicitly. If uncertain, ask.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-1-think-before-coding-02
+      text: If multiple interpretations exist, present them - don't pick silently.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-1-think-before-coding-03
+      text: If a simpler approach exists, say so. Push back when warranted.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-1-think-before-coding-04
+      text: If something is unclear, stop. Name what's confusing. Ask.
+      origin: karpathy-guidelines
+  - id: foundation
+    title: Get the foundation right
+    source_headings:
+    - source: ub-mode
+      heading: Foundational Thinking
+    - source: ub-mode
+      heading: Redesign From First Principles
+    rules:
+    - id: ub-mode-foundational-thinking-01
+      text: Get the data shape right before you write the logic.
+      origin: ub-mode
+    - id: ub-mode-foundational-thinking-02
+      text: Do first whatever helps every later phase.
+      origin: ub-mode
+    - id: ub-mode-foundational-thinking-03
+      text: If a concurrent writer would matter, do not share state.
+      origin: ub-mode
+    - id: ub-mode-redesign-from-first-principles-01
+      text: Do not bolt a new requirement onto the old design.
+      origin: ub-mode
+    - id: ub-mode-redesign-from-first-principles-02
+      text: Ask what you would have built if it had been there from the start, think that through, and deliver it
+        in pieces.
+      origin: ub-mode
+  - id: attack-premise
+    title: Attack the premise
+    source_headings:
+    - source: ub-mode
+      heading: Attack the Premise
+    rules:
+    - id: ub-mode-attack-the-premise-01
+      text: When two fixes that share one premise fail the same gate, write that premise in one sentence and count
+        which actors hold the imbalance.
+      origin: ub-mode
+    - id: ub-mode-attack-the-premise-02
+      text: Remove the assignment.
+      origin: ub-mode
+    - id: ub-mode-attack-the-premise-03
+      text: Do not start another fix until you have done that.
+      origin: ub-mode
+- id: while
+  title: While You Code
+  groups:
+  - id: keep-it-small
+    title: Keep it small
+    source_headings:
+    - source: karpathy-guidelines
+      heading: 2. Simplicity First
+    - source: ub-mode
+      heading: Laziness Protocol
+    - source: ub-mode
+      heading: Subtract Before You Add
+    rules:
+    - id: karpathy-guidelines-2-simplicity-first-01
+      text: No features beyond what was asked.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-2-simplicity-first-02
+      text: No abstractions for single-use code.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-2-simplicity-first-03
+      text: No "flexibility" or "configurability" that wasn't requested.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-2-simplicity-first-04
+      text: No error handling for impossible scenarios.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-2-simplicity-first-05
+      text: If you write 200 lines and it could be 50, rewrite it.
+      origin: karpathy-guidelines
+    - id: ub-mode-laziness-protocol-01
+      text: One decision lives in one place.
+      origin: ub-mode
+    - id: ub-mode-laziness-protocol-02
+      text: Ship the smallest edit that solves the problem.
+      origin: ub-mode
+    - id: ub-mode-subtract-before-you-add-01
+      text: Take complexity out before you add anything.
+      origin: ub-mode
+  - id: surgical-changes
+    title: Make surgical changes
+    source_headings:
+    - source: karpathy-guidelines
+      heading: 3. Surgical Changes
+    rules:
+    - id: karpathy-guidelines-3-surgical-changes-01
+      text: Don't "improve" adjacent code, comments, or formatting.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-3-surgical-changes-02
+      text: Don't refactor things that aren't broken.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-3-surgical-changes-03
+      text: Match existing style, even if you'd do it differently.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-3-surgical-changes-04
+      text: If you notice unrelated dead code, mention it - don't delete it.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-3-surgical-changes-05
+      text: Remove imports/variables/functions that YOUR changes made unused.
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-3-surgical-changes-06
+      text: Don't remove pre-existing dead code unless asked.
+      origin: karpathy-guidelines
+  - id: test-first
+    title: Write the test first
+    source_headings:
+    - source: ub-mode
+      heading: TDD
+    rules:
+    - id: ub-mode-tdd-01
+      text: Write the failing test before you change the code.
+      origin: ub-mode
+    - id: ub-mode-tdd-02
+      text: See it fail for the reason you expect.
+      origin: ub-mode
+    - id: ub-mode-tdd-03
+      text: Make the smallest change that makes it pass.
+      origin: ub-mode
+    - id: ub-mode-tdd-04
+      text: If an honest test is impractical, do not write a bad one.
+      origin: ub-mode
+  - id: test-behavior
+    title: Test behavior, not implementation
+    source_headings:
+    - source: ub-mode
+      heading: Test Behavior, Not Implementation
+    rules:
+    - id: ub-mode-test-behavior-not-implementation-01
+      text: The test calls the code the way its user does and checks the result that user would see.
+      origin: ub-mode
+    - id: ub-mode-test-behavior-not-implementation-02
+      text: If the test would still pass when every function returned nothing, throw it out.
+      origin: ub-mode
+  - id: architecture
+    title: Architecture
+    source_headings:
+    - source: ub-mode
+      heading: Architecture
+    rules:
+    - id: ub-mode-architecture-01
+      text: Put the domain in a structure that makes the illegal states impossible.
+      origin: ub-mode
+    - id: ub-mode-architecture-02
+      text: Maintain a glossary of domain terms.
+      origin: ub-mode
+    - id: ub-mode-architecture-03
+      text: If the code is already clear and local, leave it.
+      origin: ub-mode
+    - id: ub-mode-architecture-04
+      text: Check the data where it enters.
+      origin: ub-mode
+    - id: ub-mode-architecture-05
+      text: Inside, trust it.
+      origin: ub-mode
+    - id: ub-mode-architecture-06
+      text: Keep the business logic in a pure function.
+      origin: ub-mode
+    - id: ub-mode-architecture-07
+      text: Make the illegal value impossible to write.
+      origin: ub-mode
+    - id: ub-mode-architecture-08
+      text: Parse outside data once, where it comes in.
+      origin: ub-mode
+    - id: ub-mode-architecture-09
+      text: Do not silence the compiler.
+      origin: ub-mode
+    - id: ub-mode-architecture-10
+      text: Running it twice, or running it after a crash halfway through, ends in the same state.
+      origin: ub-mode
+    - id: ub-mode-architecture-11
+      text: If they do not need the same mutable thing, give each its own.
+      origin: ub-mode
+    - id: ub-mode-architecture-12
+      text: If they do, allow one writer, and enforce that in the structure.
+      origin: ub-mode
+  - id: build-lever
+    title: Build the lever
+    source_headings:
+    - source: ub-mode
+      heading: Build the Lever
+    rules:
+    - id: ub-mode-build-the-lever-01
+      text: If the work is not obvious at a glance, build the tool that does it.
+      origin: ub-mode
+    - id: ub-mode-build-the-lever-02
+      text: Do one unit by hand, then make the tool match that unit.
+      origin: ub-mode
+- id: finish
+  title: Before You Finish
+  groups:
+  - id: fix-root-cause
+    title: Fix the root cause
+    source_headings:
+    - source: ub-mode
+      heading: Fix Root Causes
+    rules:
+    - id: ub-mode-fix-root-causes-01
+      text: Reproduce it.
+      origin: ub-mode
+    - id: ub-mode-fix-root-causes-02
+      text: Fix the cause.
+      origin: ub-mode
+    - id: ub-mode-fix-root-causes-03
+      text: A guard that only hides the crash is not a fix.
+      origin: ub-mode
+  - id: sequence
+    title: Sequence the work
+    source_headings:
+    - source: ub-mode
+      heading: Sequence work into verifiable units
+    rules:
+    - id: ub-mode-sequence-work-into-verifiable-units-01
+      text: Finish one small unit and check it.
+      origin: ub-mode
+    - id: ub-mode-sequence-work-into-verifiable-units-02
+      text: Then start the next.
+      origin: ub-mode
+  - id: refactor
+    title: Refactor without changing behavior
+    source_headings:
+    - source: ub-mode
+      heading: Refactoring
+    rules:
+    - id: ub-mode-refactoring-01
+      text: Pin what the code does.
+      origin: ub-mode
+    - id: ub-mode-refactoring-02
+      text: Change the structure.
+      origin: ub-mode
+    - id: ub-mode-refactoring-03
+      text: Prove the behavior did not change.
+      origin: ub-mode
+  - id: define-done
+    title: Define done
+    source_headings:
+    - source: karpathy-guidelines
+      heading: 4. Goal-Driven Execution
+    - source: ub-mode
+      heading: Outcome-Oriented Execution
+    notes:
+    - 'For multi-step work, state a brief plan in this form:'
+    - '```text
+
+      1. [Step] → verify: [check]
+
+      2. [Step] → verify: [check]
+
+      3. [Step] → verify: [check]
+
+      ```'
+    rules:
+    - id: karpathy-guidelines-4-goal-driven-execution-01
+      text: '"Add validation" → "Write tests for invalid inputs, then make them pass"'
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-4-goal-driven-execution-02
+      text: '"Fix the bug" → "Write a test that reproduces it, then make it pass"'
+      origin: karpathy-guidelines
+    - id: karpathy-guidelines-4-goal-driven-execution-03
+      text: '"Refactor X" → "Ensure tests pass before and after"'
+      origin: karpathy-guidelines
+    - id: ub-mode-outcome-oriented-execution-01
+      text: Aim at the end state you can check.
+      origin: ub-mode
+    - id: ub-mode-outcome-oriented-execution-02
+      text: A break in the middle is allowed when you planned it and can undo it.
+      origin: ub-mode
+- id: quality
+  title: Quality Gates (Mandatory)
+  notes:
+  - Run these gates before calling the work done. If a gate tool does not support the project's language, record
+    the reason and run the nearest project-native equivalent for complexity, coverage, duplication, and mutation;
+    never skip silently.
+  - See `references/quality-gates.md` for installation and command details.
+  groups:
+  - id: crapper
+    title: Crapper — complexity and coverage
+    source_headings:
+    - source: ub-mode
+      heading: Crapper
+    extra_rules:
+    - Keep every function under CRAP 10; use `--threshold 10` for supported projects.
+    rules:
+    - id: ub-mode-crapper-01
+      text: Use the crapper tool
+      origin: ub-mode
+    - id: ub-mode-crapper-02
+      text: Reduce each function under  CRAP 10 by splitting it, by testing it, or both.
+      origin: ub-mode
+    - id: ub-mode-crapper-03
+      text: Consider whether case statements are worth reducing.
+      origin: ub-mode
+    - id: quality-crapper-extra-4
+      text: Keep every function under CRAP 10; use `--threshold 10` for supported projects.
+      origin: curated
+  - id: dryer
+    title: Dryer — duplication
+    source_headings:
+    - source: ub-mode
+      heading: Dryer
+    extra_rules:
+    - Use `--threshold 0.8` so the tool matches the 0.8 rule below.
+    rules:
+    - id: ub-mode-dryer-01
+      text: Use the dryer tool to eliminate duplication that rank 0.8 or above.
+      origin: ub-mode
+    - id: quality-dryer-extra-2
+      text: Use `--threshold 0.8` so the tool matches the 0.8 rule below.
+      origin: curated
+  - id: mutator
+    title: Mutator — mutation testing
+    source_headings:
+    - source: ub-mode
+      heading: Mutator
+    extra_rules:
+    - 'A run must exit 0: every executed mutant killed. Exit 2 means the baseline tests failed; exit 3 means a mutant
+      survived.'
+    rules:
+    - id: ub-mode-mutator-01
+      text: Use the mutator tool
+      origin: ub-mode
+    - id: ub-mode-mutator-02
+      text: Cover the uncovered.
+      origin: ub-mode
+    - id: ub-mode-mutator-03
+      text: Kill the survivors.
+      origin: ub-mode
+    - id: ub-mode-mutator-04
+      text: Delete dead code.
+      origin: ub-mode
+    - id: quality-mutator-extra-5
+      text: 'A run must exit 0: every executed mutant killed. Exit 2 means the baseline tests failed; exit 3 means
+        a mutant survived.'
+      origin: curated
+- id: practice
+  title: Practice
+  groups:
+  - id: keep-log
+    title: Keep a log
+    source_headings:
+    - source: ub-mode
+      heading: Keep a Log
+    rules:
+    - id: ub-mode-keep-a-log-01
+      text: Keep a log of every action you take and the reason you took it.
+      origin: ub-mode
+    - id: ub-mode-keep-a-log-02
+      text: Report that log upon completion.
+      origin: ub-mode
+  - id: guard-context
+    title: Guard the context window
+    source_headings:
+    - source: ub-mode
+      heading: Guard the Context Window
+    rules:
+    - id: ub-mode-guard-the-context-window-01
+      text: Keep the main thread small.
+      origin: ub-mode
+    - id: ub-mode-guard-the-context-window-02
+      text: Send the bulk elsewhere, and keep the summary.
+      origin: ub-mode
+  - id: worktree
+    title: Clean up the worktree
+    source_headings:
+    - source: ub-mode
+      heading: Worktree Cleanup
+    rules:
+    - id: ub-mode-worktree-cleanup-01
+      text: Find what is safe to remove, confirm nothing still in use needs it, then reclaim the disk.
+      origin: ub-mode
+    - id: ub-mode-worktree-cleanup-02
+      text: Uncommitted work waits for a decision.
+      origin: ub-mode
+  - id: commit
+    title: Commit and push
+    source_headings:
+    - source: ub-mode
+      heading: Commit and Push
+    rules:
+    - id: ub-mode-commit-and-push-01
+      text: Commit often, in small ordered commits.
+      origin: ub-mode
+    - id: ub-mode-commit-and-push-02
+      text: Each commit says why, what changed, and how you proved it.
+      origin: ub-mode
+    - id: ub-mode-commit-and-push-03
+      text: Push to the main line at the end.
+      origin: ub-mode
+outro:
+- '**These guidelines are working if:** diffs contain fewer unnecessary changes, fewer rewrites due to overcomplication,
+  and clarifying questions come before implementation rather than after mistakes.'
