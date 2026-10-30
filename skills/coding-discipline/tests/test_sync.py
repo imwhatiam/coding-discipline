@@ -47,6 +47,17 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(kind, "possible")
         self.assertEqual(rule["id"], "a")
 
+    def test_supersedes_matches_the_bullet_a_rule_replaces(self):
+        rules = [{
+            "id": "a",
+            "text": "Commit or push only when the user explicitly asks.",
+            "supersedes": ["Commit often, in small ordered commits."],
+        }]
+        rule, score, kind = choose_match("Commit often, in small ordered commits.", rules)
+        self.assertEqual(kind, "superseded")
+        self.assertEqual(rule["id"], "a")
+        self.assertEqual(score, 1.0)
+
 
 if __name__ == "__main__":
     unittest.main()

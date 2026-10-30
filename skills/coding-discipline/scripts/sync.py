@@ -179,11 +179,16 @@ def render(config: dict[str, Any]) -> str:
 
 
 def choose_match(text: str, rules: list[dict[str, Any]]) -> tuple[dict[str, Any] | None, float, str]:
-    """Return (rule, score, kind). kind is exact, fuzzy, possible, or new."""
+    """Return (rule, score, kind). kind is exact, superseded, fuzzy, possible, or new."""
     norm = normalize(text)
     for rule in rules:
         if normalize(rule["text"]) == norm:
             return rule, 1.0, "exact"
+
+    for rule in rules:
+        for old in rule.get("supersedes") or []:
+            if normalize(old) == norm:
+                return rule, 1.0, "superseded"
 
     best: tuple[dict[str, Any] | None, float] = (None, 0.0)
     for rule in rules:
@@ -272,6 +277,10 @@ def sync_sources(
                     matched += 1
                     rule_id = rule["id"]
                     status = "matched"
+                elif kind == "superseded":
+                    matched += 1
+                    rule_id = rule["id"]
+                    status = "superseded"
                 elif kind == "fuzzy":
                     matched += 1
                     rule_id = rule["id"]

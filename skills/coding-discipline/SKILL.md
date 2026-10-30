@@ -170,8 +170,8 @@ See `references/quality-gates.md` for installation and command details.
 
 ### Commit and push
 
-- Commit often, in small ordered commits.
-- Each commit says why, what changed, and how you proved it.
-- Push to the main line at the end.
+- Commit or push only when the user explicitly asks; a change request is not authorization.
+- When asked, use small ordered commits; each says why, what changed, and how you proved it; push only if asked.
+- Otherwise leave the changes in the working tree and report them.
 
 **These guidelines are working if:** diffs contain fewer unnecessary changes, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.

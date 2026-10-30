@@ -671,7 +671,7 @@
       "text": "Commit often, in small ordered commits.",
       "sha256": "64794762b860113de466deea4990bcd9357346d02e963b90b365272ec50eaf73",
       "rule_id": "ub-mode-commit-and-push-01",
-      "status": "matched"
+      "status": "superseded"
     },
     {
       "source": "ub-mode",
@@ -680,7 +680,7 @@
       "text": "Each commit says why, what changed, and how you proved it.",
       "sha256": "90db5a756817cddfb1d44d1a18057fa4d97cbb88bc76eded1fbf17a9ac39aebc",
       "rule_id": "ub-mode-commit-and-push-02",
-      "status": "matched"
+      "status": "superseded"
     },
     {
       "source": "ub-mode",
@@ -689,7 +689,7 @@
       "text": "Push to the main line at the end.",
       "sha256": "6520347231432f8505c73a0b3819f576db42baf66c941142b7e873674a4422b2",
       "rule_id": "ub-mode-commit-and-push-03",
-      "status": "matched"
+      "status": "superseded"
     }
   ]
 }

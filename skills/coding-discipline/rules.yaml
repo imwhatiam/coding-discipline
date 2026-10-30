@@ -412,14 +412,20 @@ sections:
       heading: Commit and Push
     rules:
     - id: ub-mode-commit-and-push-01
-      text: Commit often, in small ordered commits.
+      text: Commit or push only when the user explicitly asks; a change request is not authorization.
       origin: ub-mode
+      supersedes:
+      - Commit often, in small ordered commits.
     - id: ub-mode-commit-and-push-02
-      text: Each commit says why, what changed, and how you proved it.
+      text: When asked, use small ordered commits; each says why, what changed, and how you proved it; push only if asked.
       origin: ub-mode
+      supersedes:
+      - Each commit says why, what changed, and how you proved it.
     - id: ub-mode-commit-and-push-03
-      text: Push to the main line at the end.
+      text: Otherwise leave the changes in the working tree and report them.
       origin: ub-mode
+      supersedes:
+      - Push to the main line at the end.
 outro:
 - '**These guidelines are working if:** diffs contain fewer unnecessary changes, fewer rewrites due to overcomplication,
   and clarifying questions come before implementation rather than after mistakes.'
