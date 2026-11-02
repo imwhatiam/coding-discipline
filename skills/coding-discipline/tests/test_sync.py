@@ -108,5 +108,25 @@ class SyncPipelineTests(unittest.TestCase):
         self.assertEqual(coverage["new"], 0)
 
 
+    @patch("scripts.sync.fetch_text", return_value="# Fake\n## Topic\n- Keep changes small.\n## Skip\n- Old gate rule.\n")
+    @patch("scripts.sync.latest_commit", return_value="a" * 40)
+    def test_ignored_heading_is_neither_mapped_nor_counted(self, _commit, _fetch):
+        sources = self._sources()
+        sources[0]["ignore_headings"] = ["Skip"]
+        config, lock, coverage = sync_sources(self._config(), sources)
+        self.assertEqual(coverage["unmapped_headings"], [])
+        self.assertEqual(coverage["ignored_headings"], [{"source": "fake", "heading": "Skip"}])
+        self.assertEqual(coverage["total_source_bullets"], 1)
+        self.assertEqual(coverage["matched"], 1)
+        self.assertEqual(coverage["new"], 0)
+
+    @patch("scripts.sync.fetch_text", return_value="# Fake\n## Topic\n- Keep changes small.\n")
+    @patch("scripts.sync.latest_commit", return_value="a" * 40)
+    def test_a_heading_cannot_be_mapped_and_ignored(self, _commit, _fetch):
+        sources = self._sources()
+        sources[0]["ignore_headings"] = ["Topic"]
+        with self.assertRaises(RuntimeError):
+            sync_sources(self._config(), sources)
+
 if __name__ == "__main__":
     unittest.main()

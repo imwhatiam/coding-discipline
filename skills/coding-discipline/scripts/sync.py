@@ -235,6 +235,15 @@ def sync_sources(
         })
         log(f"fetched {source['id']} @ {commit[:10]} ({len(text.splitlines())} lines)")
 
+    ignored_headings: set[tuple[str, str]] = set()
+    for source in sources:
+        for heading in (source.get("ignore_headings") or []):
+            if heading not in all_headings[source["id"]]:
+                raise RuntimeError(f"ignored heading missing from {source['id']}: {heading}")
+            if heading in (source.get("headings") or {}):
+                raise RuntimeError(f"heading both mapped and ignored in {source['id']}: {heading}")
+            ignored_headings.add((source["id"], heading))
+
     # Map every group to the bullets of its declared source headings.
     group_lookup: dict[str, tuple[dict[str, Any], dict[str, Any]]] = {}
     for section in config["sections"]:
@@ -338,6 +347,8 @@ def sync_sources(
     unmapped = []
     for source in sources:
         for heading in all_headings[source["id"]]:
+            if (source["id"], heading) in ignored_headings:
+                continue
             if (source["id"], heading) not in mapped_headings:
                 unmapped.append({"source": source["id"], "heading": heading})
 
@@ -345,6 +356,7 @@ def sync_sources(
         len(source_index[sid]["headings"][heading])
         for sid in source_index
         for heading in source_index[sid]["headings"]
+        if (sid, heading) not in ignored_headings
     )
     coverage = {
         "total_source_bullets": total_bullets,
@@ -353,6 +365,9 @@ def sync_sources(
         "new": new_rules,
         "possible_duplicates": len(possible),
         "unmapped_headings": unmapped,
+        "ignored_headings": [
+            {"source": sid, "heading": heading} for sid, heading in sorted(ignored_headings)
+        ],
         "possible_duplicate_details": possible,
         "rules": coverage_rules,
     }
