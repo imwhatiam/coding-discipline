@@ -7,9 +7,10 @@
 
 ## Counts
 
-- Source bullets: 76
-- Matched to curated rules: 76
+- Source bullets: 68
+- Matched to curated rules: 68
 - Exact duplicates skipped: 0
 - New auto rules appended: 0
 - Possible duplicates withheld: 0
 - Unmapped headings: 0
+- Ignored headings: 3

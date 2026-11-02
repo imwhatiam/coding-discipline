@@ -2,7 +2,7 @@
 
 A lightweight coding discipline for AI coding agents.
 
-It merges the behavioral rules from Karpathy's LLM coding guidelines with Uncle Bob's three-phase `ub-mode` workflow, then adds the mandatory quality gates that make the result verifiable: CRAP, duplication, and mutation testing.
+It merges the behavioral rules from Karpathy's LLM coding guidelines with Uncle Bob's three-phase `ub-mode` workflow.
 
 ## What it does
 
@@ -11,10 +11,9 @@ The skill gives an agent a short, ordered checklist for any non-trivial code cha
 1. **Before You Code** — surface assumptions, get the data shape right, attack a failed premise before trying another patch, and redesign from first principles when a requirement no longer fits.
 2. **While You Code** — keep changes small, stay surgical, write the failing test first, test behavior rather than implementation, model the domain, and build a tool when the task is not obvious.
 3. **Before You Finish** — fix root causes, sequence work into verifiable units, refactor without changing behavior, and define done in terms you can check.
-4. **Quality Gates (Mandatory)** — keep every function under CRAP 10, eliminate duplication at 0.8 or above, and kill every mutation survivor.
-5. **Practice** — keep a log, guard the context window, clean up the worktree, and commit in small ordered commits.
+4. **Practice** — keep a log, guard the context window, clean up the worktree, and commit in small ordered commits.
 
-The full skill is [`skills/coding-discipline/SKILL.md`](skills/coding-discipline/SKILL.md). It is intentionally small: about 170 lines and roughly 1,500 tokens.
+The full skill is [`skills/coding-discipline/SKILL.md`](skills/coding-discipline/SKILL.md). It is intentionally small: about 140 lines and roughly 1,200 tokens.
 
 ## Install
 
@@ -56,8 +55,7 @@ skills/coding-discipline/
 ├── sources.lock.json         # latest synced commits and content hashes
 ├── references/
 │   ├── upstream-karpathy.md  # pinned upstream snapshot
-│   ├── upstream-ub-mode.md   # pinned upstream snapshot
-│   └── quality-gates.md      # install and run instructions for the gates
+│   └── upstream-ub-mode.md   # pinned upstream snapshot
 ├── scripts/
 │   ├── sync.py               # fetch, merge, render, report
 │   └── validate.py           # Agent Skills and coverage validation
@@ -65,16 +63,6 @@ skills/coding-discipline/
     ├── test_sync.py          # unit tests for parsing and merging
     └── coverage.json         # every upstream bullet -> merged rule
 ```
-
-## Quality gates
-
-The three gate tools are mandatory for supported languages:
-
-- [crapper](https://github.com/unclebob/crapper) — complexity, coverage, and CRAP score; keep every function under CRAP 10.
-- [dryer](https://github.com/unclebob/dryer) — structural duplication; eliminate pairs at 0.8 or above.
-- [mutator](https://github.com/unclebob/mutator) — mutation testing; cover the uncovered, kill the survivors, delete dead code.
-
-See [`references/quality-gates.md`](skills/coding-discipline/references/quality-gates.md) for installation and command details. If a project's language is unsupported, record the reason and use the nearest project-native gate; never skip silently.
 
 ## Development
 
@@ -90,6 +78,5 @@ This project is a synthesis, not a fork of either upstream repository.
 
 - [Karpathy Guidelines](https://github.com/multica-ai/andrej-karpathy-skills), derived from Andrej Karpathy's observations on LLM coding pitfalls; the skill file declares MIT.
 - [ub-mode](https://github.com/unclebob/ub-mode) by Robert C. Martin (Uncle Bob); no explicit license file is present upstream. The rules are restated with attribution; all rights remain with the original author.
-- [crapper](https://github.com/unclebob/crapper), [dryer](https://github.com/unclebob/dryer), and [mutator](https://github.com/unclebob/mutator) are 0BSD-licensed.
 
 See [`NOTICE.md`](NOTICE.md) for details. The original synthesis in this repository is MIT-licensed; see [`LICENSE`](LICENSE).

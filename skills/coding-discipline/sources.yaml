@@ -16,6 +16,10 @@ sources:
     path: SKILL.md
     ref: master
     license: "No explicit license"
+    ignore_headings:
+      - "Crapper"
+      - "Dryer"
+      - "Mutator"
     headings:
       "Laziness Protocol": keep-it-small
       "Foundational Thinking": foundation
@@ -29,9 +33,6 @@ sources:
       "Fix Root Causes": fix-root-cause
       "Sequence work into verifiable units": sequence
       "Test Behavior, Not Implementation": test-behavior
-      "Crapper": crapper
-      "Dryer": dryer
-      "Mutator": mutator
       "Refactoring": refactor
       "Keep a Log": keep-log
       "Guard the Context Window": guard-context

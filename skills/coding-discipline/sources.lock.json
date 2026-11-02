@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "skill_sha256": "03113735e18b27c852dd3192bdc5f5836dca31576ca363bbdeccdf369a9a80c1",
+  "skill_sha256": "6d41b5ebdb8750dd51e9ea88496b06adfc679555cf8c8d6d981fc12a15cdc091",
   "sources": [
     {
       "id": "karpathy-guidelines",

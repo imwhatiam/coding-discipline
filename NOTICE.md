@@ -17,10 +17,3 @@ This repository is a synthesis of two upstream skills and three quality-gate too
 - Pinned content: `references/upstream-ub-mode.md` (SHA-256 `4120873db2e3681ea9b7de4d7105fc9d3406657c9ada91ce77b9b3c4962f3202`)
 - License: no explicit license file is present upstream. This repository restates the rules for interoperability and attributes them to the original author. All rights in the original work remain with Robert C. Martin. If you are the rights holder and want the text changed or removed, open an issue.
 
-## Quality-gate tools
-
-- crapper: https://github.com/unclebob/crapper — 0BSD
-- dryer: https://github.com/unclebob/dryer — 0BSD
-- mutator: https://github.com/unclebob/mutator — 0BSD
-
-The tools are linked, not bundled. Their own licenses govern their use.

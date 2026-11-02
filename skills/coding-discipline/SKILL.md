@@ -1,6 +1,6 @@
 ---
 name: coding-discipline
-description: 'Lightweight coding discipline for AI coding agents: surface assumptions before coding, keep changes small and surgical, write failing tests first, verify outcomes, and run the mandatory quality gates. Use when writing, reviewing, refactoring, or debugging non-trivial code. Do not use for trivial one-line edits, formatting-only changes, or pure explanation.'
+description: 'Lightweight coding discipline for AI coding agents: surface assumptions before coding, keep changes small and surgical, write failing tests first, verify outcomes. Use when writing, reviewing, refactoring, or debugging non-trivial code. Do not use for trivial one-line edits, formatting-only changes, or pure explanation.'
 license: MIT
 metadata:
   version: 1.0.0
@@ -124,32 +124,6 @@ For multi-step work, state a brief plan in this form:
 2. [Step] → verify: [check]
 3. [Step] → verify: [check]
 ```
-
-## Quality Gates (Mandatory)
-
-Run these gates before calling the work done. If a gate tool does not support the project's language, record the reason and run the nearest project-native equivalent for complexity, coverage, duplication, and mutation; never skip silently.
-
-See `references/quality-gates.md` for installation and command details.
-
-### Crapper — complexity and coverage
-
-- Use the crapper tool
-- Reduce each function under  CRAP 10 by splitting it, by testing it, or both.
-- Consider whether case statements are worth reducing.
-- Keep every function under CRAP 10; use `--threshold 10` for supported projects.
-
-### Dryer — duplication
-
-- Use the dryer tool to eliminate duplication that rank 0.8 or above.
-- Use `--threshold 0.8` so the tool matches the 0.8 rule below.
-
-### Mutator — mutation testing
-
-- Use the mutator tool
-- Cover the uncovered.
-- Kill the survivors.
-- Delete dead code.
-- A run must exit 0: every executed mutant killed. Exit 2 means the baseline tests failed; exit 3 means a mutant survived.
 
 ## Practice
 

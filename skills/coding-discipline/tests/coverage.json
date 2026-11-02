@@ -1,6 +1,6 @@
 {
-  "total_source_bullets": 76,
-  "matched": 76,
+  "total_source_bullets": 68,
+  "matched": 68,
   "duplicates": 0,
   "new": 0,
   "possible_duplicates": 0,
@@ -509,78 +509,6 @@
       "text": "If the test would still pass when every function returned nothing, throw it out.",
       "sha256": "e5da200f8af853b43357439c7ca2cfdaa9c34fdc69768a3a8e35144f4bce152a",
       "rule_id": "ub-mode-test-behavior-not-implementation-02",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Crapper",
-      "index": 1,
-      "text": "Use the crapper tool",
-      "sha256": "1534cccdad4ce356ce26aabdcdce8d5f0674706d7ae65971133a02da9ada8c8d",
-      "rule_id": "ub-mode-crapper-01",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Crapper",
-      "index": 2,
-      "text": "Reduce each function under  CRAP 10 by splitting it, by testing it, or both.",
-      "sha256": "b13c9f9a59a4b9cd9164cb79eedd97f1b1c3b990610a16e2337f0814832229e6",
-      "rule_id": "ub-mode-crapper-02",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Crapper",
-      "index": 3,
-      "text": "Consider whether case statements are worth reducing.",
-      "sha256": "cd83a58d1dca167ffc708cacaf8c8ef9da23e244c40286e7eed02b10b821e1ce",
-      "rule_id": "ub-mode-crapper-03",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Dryer",
-      "index": 1,
-      "text": "Use the dryer tool to eliminate duplication that rank 0.8 or above.",
-      "sha256": "152c31f4c7ba1ece7a7dda331c7a281f996c05bdc15e538f88a36e4557960c2c",
-      "rule_id": "ub-mode-dryer-01",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Mutator",
-      "index": 1,
-      "text": "Use the mutator tool",
-      "sha256": "0f2b8a1e46a2498622d14f10face11423e7924e159c9cecd027a712437408215",
-      "rule_id": "ub-mode-mutator-01",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Mutator",
-      "index": 2,
-      "text": "Cover the uncovered.",
-      "sha256": "e2f051e3245b6d788361d66f78c8f77e52379fc7233d07811c2d974f5b2a73d7",
-      "rule_id": "ub-mode-mutator-02",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Mutator",
-      "index": 3,
-      "text": "Kill the survivors.",
-      "sha256": "afa66cfe9a65b76f58dc24219ea421e39c59cc4f4bcaf7a2ffa0ef2c5b510017",
-      "rule_id": "ub-mode-mutator-03",
-      "status": "matched"
-    },
-    {
-      "source": "ub-mode",
-      "heading": "Mutator",
-      "index": 4,
-      "text": "Delete dead code.",
-      "sha256": "9578747aa22a16075e2d259f95929d34f7d8aaeac81b33292d9b7f5ad1e27ead",
-      "rule_id": "ub-mode-mutator-04",
       "status": "matched"
     },
     {

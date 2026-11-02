@@ -2,7 +2,7 @@ version: 1
 skill:
   name: coding-discipline
   description: 'Lightweight coding discipline for AI coding agents: surface assumptions before coding, keep changes
-    small and surgical, write failing tests first, verify outcomes, and run the mandatory quality gates. Use when
+    small and surgical, write failing tests first, verify outcomes. Use when
     writing, reviewing, refactoring, or debugging non-trivial code. Do not use for trivial one-line edits, formatting-only
     changes, or pure explanation.'
   license: MIT
@@ -299,73 +299,6 @@ sections:
     - id: ub-mode-outcome-oriented-execution-02
       text: A break in the middle is allowed when you planned it and can undo it.
       origin: ub-mode
-- id: quality
-  title: Quality Gates (Mandatory)
-  notes:
-  - Run these gates before calling the work done. If a gate tool does not support the project's language, record
-    the reason and run the nearest project-native equivalent for complexity, coverage, duplication, and mutation;
-    never skip silently.
-  - See `references/quality-gates.md` for installation and command details.
-  groups:
-  - id: crapper
-    title: Crapper — complexity and coverage
-    source_headings:
-    - source: ub-mode
-      heading: Crapper
-    extra_rules:
-    - Keep every function under CRAP 10; use `--threshold 10` for supported projects.
-    rules:
-    - id: ub-mode-crapper-01
-      text: Use the crapper tool
-      origin: ub-mode
-    - id: ub-mode-crapper-02
-      text: Reduce each function under  CRAP 10 by splitting it, by testing it, or both.
-      origin: ub-mode
-    - id: ub-mode-crapper-03
-      text: Consider whether case statements are worth reducing.
-      origin: ub-mode
-    - id: quality-crapper-extra-4
-      text: Keep every function under CRAP 10; use `--threshold 10` for supported projects.
-      origin: curated
-  - id: dryer
-    title: Dryer — duplication
-    source_headings:
-    - source: ub-mode
-      heading: Dryer
-    extra_rules:
-    - Use `--threshold 0.8` so the tool matches the 0.8 rule below.
-    rules:
-    - id: ub-mode-dryer-01
-      text: Use the dryer tool to eliminate duplication that rank 0.8 or above.
-      origin: ub-mode
-    - id: quality-dryer-extra-2
-      text: Use `--threshold 0.8` so the tool matches the 0.8 rule below.
-      origin: curated
-  - id: mutator
-    title: Mutator — mutation testing
-    source_headings:
-    - source: ub-mode
-      heading: Mutator
-    extra_rules:
-    - 'A run must exit 0: every executed mutant killed. Exit 2 means the baseline tests failed; exit 3 means a mutant
-      survived.'
-    rules:
-    - id: ub-mode-mutator-01
-      text: Use the mutator tool
-      origin: ub-mode
-    - id: ub-mode-mutator-02
-      text: Cover the uncovered.
-      origin: ub-mode
-    - id: ub-mode-mutator-03
-      text: Kill the survivors.
-      origin: ub-mode
-    - id: ub-mode-mutator-04
-      text: Delete dead code.
-      origin: ub-mode
-    - id: quality-mutator-extra-5
-      text: 'A run must exit 0: every executed mutant killed. Exit 2 means the baseline tests failed; exit 3 means
-        a mutant survived.'
-      origin: curated
 - id: practice
   title: Practice
   groups:
