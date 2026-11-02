@@ -13,4 +13,3 @@
 - New auto rules appended: 0
 - Possible duplicates withheld: 0
 - Unmapped headings: 0
-- Ignored headings: 3

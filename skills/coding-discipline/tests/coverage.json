@@ -5,6 +5,20 @@
   "new": 0,
   "possible_duplicates": 0,
   "unmapped_headings": [],
+  "ignored_headings": [
+    {
+      "source": "ub-mode",
+      "heading": "Crapper"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Dryer"
+    },
+    {
+      "source": "ub-mode",
+      "heading": "Mutator"
+    }
+  ],
   "possible_duplicate_details": [],
   "rules": [
     {

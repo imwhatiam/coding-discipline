@@ -2,9 +2,8 @@ version: 1
 skill:
   name: coding-discipline
   description: 'Lightweight coding discipline for AI coding agents: surface assumptions before coding, keep changes
-    small and surgical, write failing tests first, verify outcomes. Use when
-    writing, reviewing, refactoring, or debugging non-trivial code. Do not use for trivial one-line edits, formatting-only
-    changes, or pure explanation.'
+    small and surgical, write failing tests first, verify outcomes. Use when writing, reviewing, refactoring, or
+    debugging non-trivial code. Do not use for trivial one-line edits, formatting-only changes, or pure explanation.'
   license: MIT
   metadata:
     version: 1.0.0
@@ -350,7 +349,8 @@ sections:
       supersedes:
       - Commit often, in small ordered commits.
     - id: ub-mode-commit-and-push-02
-      text: When asked, use small ordered commits; each says why, what changed, and how you proved it; push only if asked.
+      text: When asked, use small ordered commits; each says why, what changed, and how you proved it; push only
+        if asked.
       origin: ub-mode
       supersedes:
       - Each commit says why, what changed, and how you proved it.
